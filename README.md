@@ -48,7 +48,7 @@ Antes de começar, certifique-se de ter os seguintes programas instalados em sua
 3. **Importar o Banco de Dados**
 
 - Abra o [phpMyAdmin](http://localhost/phpmyadmin) no seu navegador.
-- Crie um novo banco de dados com o nome `bd_turma_h`.
+- Crie um novo banco de dados com o nome `bd_turma_g`.
 - Importe o arquivo SQL do banco de dados que está na pasta `database` dentro do projeto (ou forneça o link para o arquivo SQL no repositório).
 
 Ou, se não houver um arquivo SQL, você pode criar a tabela manualmente no phpMyAdmin com os campos necessários para armazenar as informações dos alunos (nome, email, etc).
@@ -59,7 +59,7 @@ Ou, se não houver um arquivo SQL, você pode criar a tabela manualmente no phpM
   ```php
   <?php
   define('DB_HOST', 'localhost');
-  define('DB_NAME', 'bd_turma_h');
+  define('DB_NAME', 'bd_turma_g');
   define('DB_USER', 'root');
   define('DB_PASS', '');
   ?>
