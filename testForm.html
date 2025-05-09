@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script type="text/javascript">
+function contarCaracteres(){
+    let tamanho = document.getElementById('nome').value.length;
+    if(tamanho > 10){
+        alert('Exedeu o limite, diminua o tamanho para 10');
+    }
+    console.log();
+}
+
+</script>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+<input type='text' id='nome' maxlength=45>
+<button onclick='contarCaracteres()'>
+Contar
+</button>
+
+</body>
+</html>

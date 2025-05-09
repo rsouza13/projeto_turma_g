@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Aluno</title>
 </head>
+
 <body>
     <h1>Cadastro de Aluno</h1>
-    <form action="cadastraAluno.php" method="post">
+    <form action="cadastraAluno.php" method="post" enctype="multipart/form-data">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome">
-        <br/><br/>
+        <br /><br />
+        <label for="foto">Foto:</label>
+        <input type="file" name="foto" id="foto">
+        <br /><br />
         <label for="sexo">Sexo:</label>
         <select name="sexo" id="sexo">
             <option value="F">Feminino</option>
             <option value="M">Masculino</option>
         </select>
-        <br/><br/>
+        <br /><br />
         <label for="dtNascimento">Data de Nascimento:</label>
         <input type="date" name="dtNascimento" id="dtNascimento">
-        <br/><br/>
+        <br /><br />
         <label for="peso">Peso:</label>
         <input type="number" name="peso" id="peso">
-        <br/><br/>
+        <br /><br />
         <input type="submit" value="Cadastrar" />
         <input type="reset" value="Limpar">
     </form>
 </body>
+
 </html>
