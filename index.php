@@ -14,23 +14,29 @@ $stmt->setFetchMode(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Turma G</title>
+    <link rel="stylesheet" href="//cdn.datatables.net/2.3.1/css/dataTables.dataTables.min.css">
     <link rel="stylesheet" href="assets/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/2.3.1/js/dataTables.min.js"></script>
     <script type="text/javascript" src="assets/script.js"></script>
 </head>
 <body>
     <h1>Mini-projeto Turma G</h1>
     <p><a href="cadastroAluno.html">Novo Aluno</a></p>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Foto</th>
-            <th>Nome</th>
-            <th>Sexo</th>
-            <th>Data Nascimento</th>
-            <th>Peso</th>
-            <th>Altura</th>
-            <th>Ações</th>
-        </tr>
+    <table id="myTable" class="cell-border hover stripe">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Foto</th>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Data Nascimento</th>
+                <th>Peso</th>
+                <th>Altura</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
         <?php
             while($aluno = $stmt->fetch()){
                 echo '<tr>';
@@ -50,6 +56,16 @@ $stmt->setFetchMode(PDO::FETCH_ASSOC);
                 echo '</tr>';
             }
         ?>
+        </tbody>
     </table>
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/2.3.1/i18n/pt-BR.json'
+                }
+            });
+        } );
+    </script>
 </body>
 </html>

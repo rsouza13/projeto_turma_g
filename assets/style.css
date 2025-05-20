@@ -3,19 +3,10 @@ h1 {
     font-size: 45px;
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
 th {
     background-color: gray;
 }
 
 td {
     padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: lightgray;
 }
